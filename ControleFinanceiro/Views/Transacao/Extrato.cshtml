@@ -1,0 +1,109 @@
+﻿@model TransacaoModel
+
+@{
+    ViewData["Title"] = "Meu Extrato";
+}
+
+<h2>Extrato</h2>
+
+<div class="container">
+
+    <form asp-controller="Transacao" asp-action="Extrato">
+
+        <div class="form-group">
+            <label for="Data Inicio">Data:</label>
+            <input type="date" class="form-control" asp-for="Data" />
+        </div>
+
+        <div class="form-group">
+            <label for="Data Final">Data:</label>
+            <input type="date" class="form-control" asp-for="DataFinal" />
+        </div>
+
+        <div class="form-group">
+            <label for="Tipo">Tipo:</label>
+            <div class="radio"> <label><input type="radio" asp-for="Tipo" value="A">Receita e Despesa</label></div>
+            <div class="radio"> <label><input type="radio" asp-for="Tipo" value="R">Receita</label></div>
+            <div class="radio"> <label><input type="radio" asp-for="Tipo" value="D">Despesa</label></div>
+        </div>
+
+        <div class="form-group">
+            <label for="Conta">Conta:</label>
+            <select asp-for="Conta_Id" class="form-control">
+                @{
+                    foreach (var item in (List<ContaModel>)ViewBag.ListaContas)
+                    {
+
+                        <option value="@item.id_conta.ToString()">@item.nome_conta.ToString()</option>
+
+                    }
+                }
+            </select>
+        </div>
+        <button type="submit" class="btn btn-block btn-success">Pesquisar</button>
+    </form>
+</div>
+<br />
+<table class="table table-bordered">
+
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Id</th>
+            <th>Data</th>
+            <th>Tipo</th>
+            <th>Valor</th>
+            <th>Hisotrico</th>
+            <th>Conta</th>
+            <th>Plano de Conta</th>
+
+
+        </tr>
+    </thead>
+
+    @{
+        var vTotalReceita = 0.00;
+        var vTotalDespeas = 0.00;
+        var vSaldo = 0.00;
+        foreach (var item in (List<TransacaoModel>)ViewBag.ListaTransacao)
+        {
+            <tbody>
+                <tr>
+                    <td><button typpe="button" class="btn btn-danger" onclick="EditarTransacao(@item.Id.ToString())">Editar</button></td>
+                    <td>@item.Id</td>
+                    <td>@item.Data</td>
+                    <td>@item.Tipo.ToString().Replace("R", "Receita").Replace("D", "Despesa")</td>
+                    <td>@item.Valor</td>
+                    <td>@item.Descricao</td>
+                    <td>@item.Nome_conta</td>
+                    <td>@item.DescricaoPlanoConta</td>
+                </tr>
+
+                @{
+                    if (item.Tipo == "D")
+                    {
+                        vTotalDespeas += double.Parse(item.Valor.ToString());
+
+                    }
+                    else
+                    {
+                        vTotalReceita += double.Parse(item.Valor.ToString());
+
+                    }
+
+                }
+
+            </tbody>
+        }
+        vSaldo = vTotalReceita - vTotalDespeas;
+    }
+
+</table>
+
+<h3><strong>Saldo: </strong>R$ @vSaldo</h3>
+
+<script>
+    function EditarTransacao(Id) {
+        window.location.href = "../Transacao/Registrar/" + Id;
+    }
+</script>

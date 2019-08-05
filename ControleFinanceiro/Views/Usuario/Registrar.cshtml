@@ -1,0 +1,41 @@
+﻿@model UsuarioModel
+
+@{
+    Layout = "../Shared/_LayoutLogin.cshtml";
+
+}
+
+<div class="container" style="background-color:rgba(239, 239, 239, 0.95 ); border-radius: 10px; padding:10px; width:300px">
+    <h3> Registar minha conta </h3>
+    <br>
+    <form asp-controller="Usuario" asp-action="Registrar">
+        <div class="form-group">
+            <label for="nome">Nome:</label>
+            <input type="text" class="form-control" asp-for="Nome">
+            <span asp-validation-for="Nome" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" asp-for="Email">
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="pwd">Senha:</label>
+            <input type="password" class="form-control" asp-for="Senha">
+            <span asp-validation-for="Senha" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="dataNascimento">Nascimento:</label>
+            <input type="date" class="form-control" asp-for="dataNascimento">
+            <span asp-validation-for="dataNascimento" class="text-danger"></span>
+        </div>
+
+
+
+        <button type="submit" class="btn btn-success btn-block">Registar</button>
+        <button type="button" class="btn btn-primary btn-block" onclick="javascript: window.location.href='../Usuario/Login'">Login</button>
+    </form>
+</div>

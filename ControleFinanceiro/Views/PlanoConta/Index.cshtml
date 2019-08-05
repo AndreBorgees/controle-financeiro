@@ -1,0 +1,57 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h3>Criar Plano de Contas</h3>
+
+<table class="table table-bordered">
+
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>#</th>
+            <th>Id</th>
+            <th>Descrição</th>
+            <th>Tipo</th>
+            <th>Id Usuario</th>
+        </tr>
+    </thead>
+
+    @{
+        foreach (var item in (List<PlanoContaModel>)ViewBag.ListaPlanoConta)
+        {
+            <tbody>
+                <tr>
+                    <td><button typpe="button" class="btn btn-warning" onclick="EditarPlanoConta(@item.Id.ToString())">Editar</button></td>
+                    <td><button typpe="button" class="btn btn-danger" onclick="ExcluirPlanoConta(@item.Id.ToString())">Excluir</button></td>
+                    <td>@item.Id</td>
+                    <td>@item.Descricao</td>
+                    <td>@item.Tipo.ToString().Replace("R", "Receita").Replace("D", "Despesa")</td>
+                    <td>@item.Usuario_Id</td>
+                </tr>
+
+            </tbody>
+        }
+    }
+
+</table>
+
+<button type="button" class="btn btn-block btn-primary" onclick="CriarPlanoConta()">Criar Plano de Conta</button>
+
+<script>
+
+    function CriarPlanoConta()
+    {
+        window.location = "../PlanoConta/CriarPlanoConta";
+    }
+
+    function ExcluirPlanoConta(Id) {
+        window.location = "../PlanoConta/ExcluirPlanoConta/" + Id;
+    }
+
+    function EditarPlanoConta(Id) {
+        window.location = "../PlanoConta/CriarPlanoConta/" + Id;
+    }
+
+</script>
