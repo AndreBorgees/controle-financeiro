@@ -31,3 +31,14 @@ C:\Projetos\AspNet\ControleFinanceiro\ControleFinanceiro\obj\Debug\netcoreapp2.0
 C:\Projetos\AspNet\ControleFinanceiro\ControleFinanceiro\obj\Debug\netcoreapp2.0\ControleFinanceiro.AssemblyInfo.cs
 C:\Projetos\AspNet\ControleFinanceiro\ControleFinanceiro\obj\Debug\netcoreapp2.0\ControleFinanceiro.dll
 C:\Projetos\AspNet\ControleFinanceiro\ControleFinanceiro\obj\Debug\netcoreapp2.0\ControleFinanceiro.pdb
+C:\Projetos\AspNet\ControleFinanceiro\controle-financeiro-aspnetcore\ControleFinanceiro\bin\Debug\netcoreapp2.0\ControleFinanceiro.deps.json
+C:\Projetos\AspNet\ControleFinanceiro\controle-financeiro-aspnetcore\ControleFinanceiro\bin\Debug\netcoreapp2.0\ControleFinanceiro.runtimeconfig.json
+C:\Projetos\AspNet\ControleFinanceiro\controle-financeiro-aspnetcore\ControleFinanceiro\bin\Debug\netcoreapp2.0\ControleFinanceiro.runtimeconfig.dev.json
+C:\Projetos\AspNet\ControleFinanceiro\controle-financeiro-aspnetcore\ControleFinanceiro\bin\Debug\netcoreapp2.0\ControleFinanceiro.dll
+C:\Projetos\AspNet\ControleFinanceiro\controle-financeiro-aspnetcore\ControleFinanceiro\bin\Debug\netcoreapp2.0\ControleFinanceiro.pdb
+C:\Projetos\AspNet\ControleFinanceiro\controle-financeiro-aspnetcore\ControleFinanceiro\obj\Debug\netcoreapp2.0\ControleFinanceiro.csprojAssemblyReference.cache
+C:\Projetos\AspNet\ControleFinanceiro\controle-financeiro-aspnetcore\ControleFinanceiro\obj\Debug\netcoreapp2.0\ControleFinanceiro.csproj.CoreCompileInputs.cache
+C:\Projetos\AspNet\ControleFinanceiro\controle-financeiro-aspnetcore\ControleFinanceiro\obj\Debug\netcoreapp2.0\ControleFinanceiro.AssemblyInfoInputs.cache
+C:\Projetos\AspNet\ControleFinanceiro\controle-financeiro-aspnetcore\ControleFinanceiro\obj\Debug\netcoreapp2.0\ControleFinanceiro.AssemblyInfo.cs
+C:\Projetos\AspNet\ControleFinanceiro\controle-financeiro-aspnetcore\ControleFinanceiro\obj\Debug\netcoreapp2.0\ControleFinanceiro.dll
+C:\Projetos\AspNet\ControleFinanceiro\controle-financeiro-aspnetcore\ControleFinanceiro\obj\Debug\netcoreapp2.0\ControleFinanceiro.pdb

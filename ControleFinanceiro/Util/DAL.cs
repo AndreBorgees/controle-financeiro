@@ -8,7 +8,7 @@ namespace ControleFinanceiro.Util
         private static string servidor = "localhost";
         private static string baseDados = "financeiro";
         private static string usuario = "root";
-        private static string senha = "Ebnzdb123";
+        private static string senha = "1234";
         private static string stringConexao = $"Server={servidor}; Database={baseDados}; Uid={usuario}; Password={senha}; SslMode=none";
         private static MySqlConnection conexao;
 
